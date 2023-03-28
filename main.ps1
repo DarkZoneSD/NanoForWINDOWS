@@ -12,13 +12,14 @@ $sourcefile = "$env:TEMP\nanorc.zip"
 Expand-7Zip -ArchiveFileName $sourcefile -TargetPath "$env:TEMP\nanorc"
 
 (mkdir C:\nano) -and (mkdir C:\nano\bin) -and (mkdir C:\nano\nanorc) -and (mkdir C:\nano\doc)
+$sharePath = "$env:TEMP\nano-win10172\pkg_i686-w64-mingw32\share"
 
 Copy-Item "$env:TEMP\nano-win10172\pkg_i686-w64-mingw32\bin\nano.exe" "C:\nano\bin\nano.exe"
 Copy-Item "$env:TEMP\nanorc\nanorc-master\*.nanorc" "C:\nano\nanorc\" -Exclude gitcommit.nanorc, html.j2.nanorc, twig.nanorc, zshrc.nanorc
-Copy-Item "$env:TEMP\nano-win10172\pkg_i686-w64-mingw32\share\doc\nano\*.html" "C:\nano\doc\"
-Copy-Item "$env:TEMP\nano-win10172\pkg_i686-w64-mingw32\share\nano\*.nanorc" "C:\nano\nanorc\" -Force
-Copy-Item "$env:TEMP\nano-win10172\pkg_i686-w64-mingw32\share\nano\extra\*.nanorc" "C:\nano\nanorc\" -Force
-Copy-Item "$env:TEMP\\nano-win10172\.nanorc" "$env:USERPROFILE\.nanorc"
+Copy-Item "$sharePath\doc\nano\*.html" "C:\nano\doc\"
+Copy-Item "$sharePath\nano\*.nanorc" "C:\nano\nanorc\" -Force
+Copy-Item "$sharePath\nano\extra\*.nanorc" "C:\nano\nanorc\" -Force
+Copy-Item "$env:TEMP\nano-win10172\.nanorc" "$env:USERPROFILE\.nanorc"
 
 Add-Content -Path $env:USERPROFILE\.nanorc "include ""/nano/nanorc/*.nanorc"" "
 
