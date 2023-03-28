@@ -4,7 +4,7 @@
 
 <div align="center" width="100%">
     <h2></h2>
-    <p>Installation script for Nano one Windows with syntax highlighting </p>
+    <p>Installation script for Nano on Windows with syntax highlighting</p>
 
 </div>
 
