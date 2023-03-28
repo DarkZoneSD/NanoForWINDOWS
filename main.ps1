@@ -20,28 +20,6 @@ function Get-SomeInput
 		}
 	}
 }
-#Prompt the user if he wants to install 7Zip for Powershell
-function Get-SomeOtherInput
-{
-	Write-Host "[" -NoNewline; Write-Host "y" -f Green -NoNewline; Write-Host "/" -NoNewline; Write-Host "n" -f Red -NoNewline; Write-Host "]" -NoNewline
-	$input = read-host "Do you want to install 7Zip for Powershell? (Press n if you have it already installed)"
-	
-	switch ($input) `
-	{
-		'y' {
-			Install-7Zip
-		}
-		
-		'n' {
-			EverythingElse
-		}
-		
-		default {
-			write-host 'You may only answer y or n, please try again.'
-			Get-SomeOtherInput
-		}
-	}
-}
 #Installs Nano - Gets called if User Input == n in the last prompt. 
 #Gets called by teh Install7Zip Function if the User Input == y 
 function EverythingElse
@@ -71,6 +49,28 @@ function EverythingElse
 	New-Item -ItemType SymbolicLink -Path "C:\ProgramData\.local\share\nano\filepos_history" -Target "$env:USERPROFILE\.local\share\nano\filepos_history" -Force
 	# Link .nanorc files:
 	New-Item -ItemType SymbolicLink -Path "C:\ProgramData\.nanorc" -Target "$env:USERPROFILE\.nanorc" -Force
+}
+#Prompt the user if he wants to install 7Zip for Powershell
+function Get-SomeOtherInput
+{
+	Write-Host "[" -NoNewline; Write-Host "y" -f Green -NoNewline; Write-Host "/" -NoNewline; Write-Host "n" -f Red -NoNewline; Write-Host "]" -NoNewline
+	$input = read-host "Do you want to install 7Zip for Powershell? (Press n if you have it already installed)"
+	
+	switch ($input) `
+	{
+		'y' {
+			Install-7Zip
+		}
+		
+		'n' {
+			EverythingElse
+		}
+		
+		default {
+			write-host 'You may only answer y or n, please try again.'
+			Get-SomeOtherInput
+		}
+	}
 }
 
 function Install-7Zip
