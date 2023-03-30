@@ -9,10 +9,10 @@
 </div>
 
 ## Description
-- Use Nano in Windows as an In-Terminal text editor that is easy to navigate and adjust
+- Use the GNU Nano Text Editor in Windows as an In-Terminal text editor that is easy to navigate and adjust
 - Nano for Windows is installed using https://github.com/lhmouse/nano-win
 - Syntax highlighting for various programming and scripting languages with the use of https://github.com/scopatz/nanorc 
-
+- Syntax Highlighting will only work on locally stored Files, if you have a mounted Drive and try to edit with Nano it will throw an Error
 <img src="https://github.com/DarkZoneSD/NanoWithSyntaxHighlightForWIN/blob/master/Example.PNG" width="700px">
 
 ##  Requirements
