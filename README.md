@@ -1,5 +1,5 @@
 <div align="center" width="100%">
-    <img src="https://github.com/DarkZoneSD/NanoWithSyntaxHighlightForWIN/blob/DarkZoneSD-README/NanoForWINDOWS.jpg" width="550" />
+    <img src="https://github.com/DarkZoneSD/NanoForWINDOWS/blob/master/NanoForWINDOWS.jpg" width="550" />
 </div>
 
 <div align="center" width="100%">
