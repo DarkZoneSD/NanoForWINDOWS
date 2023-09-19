@@ -42,7 +42,7 @@ function EverythingElse
 	Copy-Item "$sharePath\nano\extra\*.nanorc" "C:\nano\nanorc\" -Force
 	Copy-Item "$env:TEMP\nano-win10172\.nanorc" "$env:USERPROFILE\.nanorc"
 	
-	Add-Content -Path $env:USERPROFILE\.nanorc "include ""/nano/nanorc/*.nanorc"" "
+	Add-Content -Path $env:USERPROFILE\.nanorc "include ""C:/nano/nanorc/*.nanorc"" "
 	
 	[System.Environment]::SetEnvironmentVariable("PATH", $Env:Path + ";C:\nano\bin", "Machine")
 	# Link last cursor position files:
