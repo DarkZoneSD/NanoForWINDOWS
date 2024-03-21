@@ -85,7 +85,8 @@ xml.nanorc              xresources.nanorc
 yaml.nanorc             yum.nanorc
 zig.nanorc              zsh.nanorc
 
-``` 
-
+```
+##  Activity
+![Alt](https://repobeats.axiom.co/api/embed/8fc390430e36b621a0fe1596db577b2a620226a4.svg "Repobeats analytics image")
 
 
